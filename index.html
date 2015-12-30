@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SpatiaFeed</title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="http://cdn.datatables.net/1.10.5/css/jquery.dataTables.css">
+    <link rel="stylesheet" type="text/css" href="http://highlightjs.org/static/demo/styles/default.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <script type="text/javascript" language="javascript" src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" language="javascript" src="http://cdn.datatables.net/1.10.5/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" language="javascript" src="http://cdnjs.cloudflare.com/ajax/libs/simplemodal/1.4.4/jquery.simplemodal.min.js"></script>
+    <script type="text/javascript" language="javascript" src="http://highlightjs.org/static/highlight.pack.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3&libraries=places"></script>
+    <script type="text/javascript" language="javascript" src="js/main.js"></script>
+
+</head>
+<body>
+
+<div class="container canvas">
+    <div class="topbar" data-scrollspy="scrollspy">
+        <div class="topbar-inner">
+            <div class="container canvas">
+                <a class="brand" href="#">SpatiaFeed</a>
+                <fb:login-button id='login-button' scope="public_profile,user_friends,user_posts,email,publish_actions" onlogin="checkLoginState();">
+                </fb:login-button>
+            </div>
+        </div>
+    </div>
+<section id="overview">
+
+<div class="row">
+    <div class="hero-unit">
+        <p>
+            <label>Latitude and Longitude</label>
+            <input type="text" name="latlng" id="latlng" value="0,0"/>
+            <input id="pac-input" class="controls" type="text" placeholder="Enter a location">
+        </p>
+        <div id="map-canvas"></div>
+        <table id="places" class="zebra-striped" cellspacing="0" width="100%">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <!--<th>Checkins</th>-->
+                    <th>Street</th>
+                    <th>City</th>
+                    <th>Zip</th>
+                    <th>Country</th>
+                    <th>Latitude</th>
+                    <th>Longitude</th>
+                </tr>
+            </thead>
+        </table>
+    </div>
+</div>
+</section>
+</div>
+
+</body>
+</html>
